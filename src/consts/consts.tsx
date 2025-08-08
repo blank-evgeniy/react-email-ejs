@@ -9,7 +9,7 @@ export const emailTemplates = {
 
 // почты, на которые отправляются письма
 export const emails = {
-  gmail: "fontrfontr@gmail.com",
+  gmail: process.env.NEXT_PUBLIC_GMAIL,
   // outlook: process.env.NEXT_PUBLIC_OUTLOOK,
   // yandex: process.env.NEXT_PUBLIC_YANDEX,
   // mail: process.env.NEXT_PUBLIC_MAIL,
