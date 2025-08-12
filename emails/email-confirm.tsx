@@ -37,6 +37,13 @@ const EmailConfirmationEmail = () => {
                 ПОДТВЕРЖДЕНИЕ ЭЛЕКТРОННОЙ ПОЧТЫ
               </Heading>
               <Img
+                style={{ position: 'absolute', right: '-60px', bottom: '-60px' }}
+                src="https://storage.yandexcloud.net/animalmore/emails/tinsel.webp"
+                alt="Мишура"
+                width={270}
+                height={270}
+              />
+              <Img
                 style={{ position: 'absolute', right: '-60px', bottom: '-100px' }}
                 src="https://storage.yandexcloud.net/animalmore/emails/mouse.webp"
                 alt="Мышонок поздравляет с регистрацией"
@@ -48,7 +55,7 @@ const EmailConfirmationEmail = () => {
             <Text style={text} >
               Для того, чтобы завершить регистрацию и перейти в Личный Кабинет - подтвердите свою электронную почту
             </Text>
-            <Button href="[ссылка]" style={{...buttonStyle, textAlign: 'center'}}>
+            <Button href="[ссылка]" style={{ ...buttonStyle, textAlign: 'center' }}>
               Подтвердить электронную почту
             </Button>
           </Section>

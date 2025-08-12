@@ -36,6 +36,13 @@ const PasswordResetEmail = () => {
                 ВОССТАНОВЛЕНИЕ ПАРОЛЯ
               </Heading>
               <Img
+                style={{ position: 'absolute', right: '-80px', top: '-80px' }}
+                src="https://storage.yandexcloud.net/animalmore/emails/gear.webp"
+                alt="Шестерня"
+                width={140}
+                height={140}
+              />
+              <Img
                 style={{ position: 'absolute', right: '-40px', bottom: '-150px' }}
                 src="https://storage.yandexcloud.net/animalmore/emails/bear.webp"
                 alt="Медведь восстанавливает пароль"
