@@ -6,7 +6,6 @@ import {
   Section,
   Text,
   Button,
-  Link,
   Preview,
   Heading,
   Hr,
@@ -23,73 +22,51 @@ const PasswordResetEmail = () => {
       <Preview>Восстановление пароля к вашему аккаунту</Preview>
       <Body>
         <Container style={container}>
-          <Section
-            style={{
-              paddingTop: "32px",
-              paddingLeft: "12px",
-              paddingRight: "12px",
-            }}
-          >
-            <Img
-              src="https://storage.yandexcloud.net/animalmore/emails/logo.png"
-              width="289"
-              height="71"
-              alt="Animalmore"
-            />
-
-            <Heading as="h1" style={heading}>
-              Восстановление пароля к вашему аккаунту
-            </Heading>
-
-            <Text style={text}>
-              Вы запросили восстановление пароля. Чтобы установить новый пароль,
-              нажмите на кнопку ниже.
-            </Text>
-            <Text style={{ ...text, marginBottom: 0 }}>
-              Если вы не запрашивали сброс пароля,
-            </Text>
-            <Text style={{ ...text, margin: 0 }}>
-              просто проигнорируйте это письмо — ваши данные в безопасности.
-            </Text>
-
-            <Button
-              href="[ссылка]"
+          <Section>
+            <Section
               style={{
-                color: "white",
-                borderRadius: "10px",
-                backgroundColor: "#E9618C",
-                padding: "12px 50px",
-                marginTop: "32px",
-                display: "inline-block",
-                fontSize: "18px",
-                fontWeight: "600",
-                textAlign: "center",
+                color: 'white',
+                backgroundColor: '#CCD356',
+                borderRadius: '24px',
+                position: 'relative',
+                overflow: 'hidden'
               }}
             >
+              <Heading as="h1" style={{ ...heading, position: 'relative' }}>
+                ВОССТАНОВЛЕНИЕ ПАРОЛЯ
+              </Heading>
+              <Img
+                style={{ position: 'absolute', right: '-40px', bottom: '-150px' }}
+                src="https://storage.yandexcloud.net/animalmore/emails/bear.webp"
+                alt="Медведь восстанавливает пароль"
+                width={220}
+                height={280}
+              />
+            </Section>
+
+            <Text style={text} >
+              Для того, чтобы завершить регистрацию и перейти в Личный Кабинет - подтвердите свою электронную почту
+            </Text>
+            <Button href="[ссылка]" style={{ ...buttonStyle, textAlign: 'center' }}>
               Сбросить пароль
             </Button>
-            <Link
-              style={{ marginTop: "20px", display: "block", color: "#344054" }}
-              href="[ссылка]"
-            >
-              Или перейдите по ссылке:
-            </Link>
-            <Link
+            <Text
               style={{
-                display: "block",
-                textDecoration: "underline",
-                color: "#344054",
+                marginTop: '25px',
+                fontSize: '14px',
+                lineHeight: '125%',
+                textDecoration: 'underline',
+                color: '#3F3F3F80',
               }}
-              href="[ссылка]"
             >
-              [ссылка]
-            </Link>
+              Если вы не запрашивали сброс пароля, просто проигнорируйте это письмо
+            </Text>
           </Section>
 
           <Hr
             style={{
-              borderColor: "#DFDFDF",
-              marginTop: "64px",
+              borderColor: "#D9D9D9",
+              marginTop: "40px",
             }}
           />
 
@@ -101,22 +78,38 @@ const PasswordResetEmail = () => {
 };
 
 const container = {
-  paddingTop: "40px",
-  color: "#344054",
+  maxWidth: "790px",
   margin: "0 auto",
+  color: "#61666F",
+  borderRadius: '6px',
 };
 
 const heading = {
-  fontSize: "32px",
-  fontWeight: "500",
-  lineHeight: "38.4px",
-  width: "360px",
-  marginTop: "48px",
+  maxWidth: '400px',
+  margin: "50px 30px",
+  fontWeight: "400",
+  fontSize: "28px",
+  lineHeight: "30px",
+  zIndex: '1',
 };
 
+
 const text = {
-  fontSize: "16px",
-  lineHeight: "20px",
+  fontSize: "20px",
+  lineHeight: "32px",
+  marginTop: "25px",
+  marginBottom: "20px"
+};
+
+const buttonStyle = {
+  display: "inline-block",
+  padding: "10px 32px",
+  color: "white",
+  borderRadius: "6px",
+  backgroundColor: "#7DB21B",
+  lineHeight: '32px',
+  fontSize: "22px",
+  fontWeight: "400",
 };
 
 export default PasswordResetEmail;
