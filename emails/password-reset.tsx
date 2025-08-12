@@ -2,7 +2,6 @@ import {
   Html,
   Body,
   Container,
-  Img,
   Section,
   Text,
   Button,
@@ -26,33 +25,25 @@ const PasswordResetEmail = () => {
             <Section
               style={{
                 color: 'white',
-                backgroundColor: '#CCD356',
-                borderRadius: '24px',
-                position: 'relative',
-                overflow: 'hidden'
+                backgroundSize: 'fill',
+                backgroundRepeat: 'no-repeat',
+                backgroundImage: "url(https://storage.yandexcloud.net/animalmore/emails/banner_password_reset.png)",
               }}
             >
-              <Heading as="h1" style={{ ...heading, position: 'relative' }}>
-                ВОССТАНОВЛЕНИЕ ПАРОЛЯ
-              </Heading>
-              <Img
-                style={{ position: 'absolute', right: '-80px', top: '-80px' }}
-                src="https://storage.yandexcloud.net/animalmore/emails/gear.webp"
-                alt="Шестерня"
-                width={140}
-                height={140}
-              />
-              <Img
-                style={{ position: 'absolute', right: '-40px', bottom: '-150px' }}
-                src="https://storage.yandexcloud.net/animalmore/emails/bear.webp"
-                alt="Медведь восстанавливает пароль"
-                width={220}
-                height={280}
-              />
+              <Section style={{
+                position: 'relative',
+                borderRadius: '24px',
+                backgroundColor: '#CCD356',
+                zIndex: '-1'
+              }}>
+                <Heading as="h1" style={heading}>
+                  ВОССТАНОВЛЕНИЕ ПАРОЛЯ
+                </Heading>
+              </Section>
             </Section>
 
             <Text style={text} >
-              Для того, чтобы завершить регистрацию и перейти в Личный Кабинет - подтвердите свою электронную почту
+              Чтобы установить новый пароль, нажмите на кнопку ниже
             </Text>
             <Button href="[ссылка]" style={{ ...buttonStyle, textAlign: 'center' }}>
               Сбросить пароль
@@ -92,14 +83,13 @@ const container = {
 };
 
 const heading = {
-  maxWidth: '400px',
+  maxWidth: '380px',
   margin: "50px 30px",
   fontWeight: "400",
   fontSize: "28px",
   lineHeight: "30px",
-  zIndex: '1',
+  zIndex: '-1'
 };
-
 
 const text = {
   fontSize: "20px",

@@ -2,7 +2,6 @@ import {
   Html,
   Body,
   Container,
-  Img,
   Section,
   Text,
   Button,
@@ -27,29 +26,21 @@ const EmailConfirmationEmail = () => {
             <Section
               style={{
                 color: 'white',
-                backgroundColor: '#CCD356',
-                borderRadius: '24px',
-                position: 'relative',
-                overflow: 'hidden'
+                backgroundSize: 'fill',
+                backgroundRepeat: 'no-repeat',
+                backgroundImage: "url(https://storage.yandexcloud.net/animalmore/emails/banner_email_confirm.png)",
               }}
             >
-              <Heading as="h1" style={{ ...heading, position: 'relative' }}>
-                ПОДТВЕРЖДЕНИЕ ЭЛЕКТРОННОЙ ПОЧТЫ
-              </Heading>
-              <Img
-                style={{ position: 'absolute', right: '-60px', bottom: '-60px' }}
-                src="https://storage.yandexcloud.net/animalmore/emails/tinsel.webp"
-                alt="Мишура"
-                width={270}
-                height={270}
-              />
-              <Img
-                style={{ position: 'absolute', right: '-60px', bottom: '-100px' }}
-                src="https://storage.yandexcloud.net/animalmore/emails/mouse.webp"
-                alt="Мышонок поздравляет с регистрацией"
-                width={320}
-                height={350}
-              />
+              <Section style={{
+                position: 'relative',
+                borderRadius: '24px',
+                backgroundColor: '#CCD356',
+                zIndex: '-1'
+              }}>
+                <Heading as="h1" style={heading}>
+                  ПОДТВЕРЖДЕНИЕ ЭЛЕКТРОННОЙ ПОЧТЫ
+                </Heading>
+              </Section>
             </Section>
 
             <Text style={text} >
@@ -87,7 +78,6 @@ const heading = {
   fontWeight: "400",
   fontSize: "30px",
   lineHeight: "32px",
-  zIndex: '1',
 };
 
 
@@ -99,14 +89,12 @@ const text = {
 };
 
 const buttonStyle = {
-  display: "inline-block",
   padding: "10px 32px",
   color: "white",
   borderRadius: "6px",
   backgroundColor: "#7DB21B",
   lineHeight: '32px',
   fontSize: "22px",
-  fontWeight: "400",
 };
 
 export default EmailConfirmationEmail;
