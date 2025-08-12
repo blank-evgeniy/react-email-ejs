@@ -2,20 +2,13 @@ import { Column, Img, Link, Row, Section, Text } from "@react-email/components";
 
 export function EmailFooter() {
   return (
-    <Section style={{ paddingLeft: "12px", paddingRight: "12px" }}>
-      <Row
-        style={{
-          paddingTop: "24px",
-          marginBottom: "40px",
-          borderColor: "#DFDFDF",
-          borderTop: "1px",
-        }}
-      >
-        <Column style={{ width: "100%", paddingRight: "16px" }}>
+    <Section style={{ marginTop: '18px' }}>
+      <Row>
+        <Column style={{ width: "100%", color: '#7DB21B'}}>
           <Text
-            style={{ width: "320px", fontSize: "16px", lineHeight: "20px" }}
+            style={{ width: "210px", fontSize: "12px", lineHeight: "125%", margin: '0' }}
           >
-            © 2020 – 2024 Сервис подбора питомцев ООО «Энималмор».
+            © 2020 – 2025  ООО «Энималмор». Все права защищены.
           </Text>
         </Column>
         <Column>

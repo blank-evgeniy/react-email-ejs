@@ -6,7 +6,6 @@ import {
   Section,
   Text,
   Button,
-  Link,
   Preview,
   Heading,
   Hr,
@@ -17,73 +16,47 @@ import { EmailFooter } from "./components/Footer";
 export const baseUrl = "http://localhost:3001";
 
 const EmailConfirmationEmail = () => {
+
   return (
     <Html lang="ru">
       <Header />
       <Preview>Подтверждение вашей почты</Preview>
       <Body>
         <Container style={container}>
-          <Section
-            style={{
-              paddingTop: "32px",
-              paddingLeft: "12px",
-              paddingRight: "12px",
-            }}
-          >
-            <Img
-              src="https://storage.yandexcloud.net/animalmore/emails/logo.png"
-              width="289"
-              height="71"
-              alt="Animalmore"
-            />
+          <Section>
+            <Section
+              style={{
+                color: 'white',
+                backgroundColor: '#CCD356',
+                borderRadius: '24px',
+                position: 'relative',
+                overflow: 'hidden'
+              }}
+            >
+              <Heading as="h1" style={{ ...heading, position: 'relative' }}>
+                ПОДТВЕРЖДЕНИЕ ЭЛЕКТРОННОЙ ПОЧТЫ
+              </Heading>
+              <Img
+                style={{ position: 'absolute', right: '-60px', bottom: '-100px' }}
+                src="https://storage.yandexcloud.net/animalmore/emails/mouse.webp"
+                alt="Мышонок поздравляет с регистрацией"
+                width={320}
+                height={350}
+              />
+            </Section>
 
-            <Heading as="h1" style={heading}>
-              Подтверждение вашей электронной почты
-            </Heading>
-
-            <Text style={text}>
-              Вы запросили подтверждение вашей электронной почты для аккаунта на
-              AnimalMore. Чтобы завершить процесс, нажмите на кнопку ниже:
+            <Text style={text} >
+              Для того, чтобы завершить регистрацию и перейти в Личный Кабинет - подтвердите свою электронную почту
             </Text>
-
-            <Button
-              href="[ссылка]"
-              style={{
-                color: "white",
-                borderRadius: "10px",
-                backgroundColor: "#E9618C",
-                padding: "12px 50px",
-                marginTop: "32px",
-                display: "inline-block",
-                fontSize: "18px",
-                fontWeight: "600",
-                textAlign: "center",
-              }}
-            >
-              Подтвердить почту
+            <Button href="[ссылка]" style={{...buttonStyle, textAlign: 'center'}}>
+              Подтвердить электронную почту
             </Button>
-            <Link
-              style={{ marginTop: "20px", display: "block", color: "#344054" }}
-              href="[ссылка]"
-            >
-              Или перейдите по ссылке:
-            </Link>
-            <Link
-              style={{
-                display: "block",
-                textDecoration: "underline",
-                color: "#344054",
-              }}
-              href="[ссылка]"
-            >
-              [ссылка]
-            </Link>
           </Section>
 
           <Hr
             style={{
-              borderColor: "#DFDFDF",
-              marginTop: "64px",
+              borderColor: "#D9D9D9",
+              marginTop: "40px",
             }}
           />
 
@@ -95,22 +68,38 @@ const EmailConfirmationEmail = () => {
 };
 
 const container = {
-  paddingTop: "40px",
-  color: "#344054",
+  maxWidth: "790px",
   margin: "0 auto",
+  color: "#61666F",
+  borderRadius: '6px',
 };
 
 const heading = {
-  fontSize: "32px",
-  fontWeight: "500",
-  lineHeight: "38.4px",
-  width: "360px",
-  marginTop: "48px",
+  maxWidth: '450px',
+  margin: "50px 30px",
+  fontWeight: "400",
+  fontSize: "30px",
+  lineHeight: "32px",
+  zIndex: '1',
 };
 
+
 const text = {
-  fontSize: "16px",
-  lineHeight: "20px",
+  fontSize: "20px",
+  lineHeight: "32px",
+  marginTop: "25px",
+  marginBottom: "20px"
+};
+
+const buttonStyle = {
+  display: "inline-block",
+  padding: "10px 32px",
+  color: "white",
+  borderRadius: "6px",
+  backgroundColor: "#7DB21B",
+  lineHeight: '32px',
+  fontSize: "22px",
+  fontWeight: "400",
 };
 
 export default EmailConfirmationEmail;
