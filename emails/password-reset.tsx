@@ -6,8 +6,8 @@ import {
   Text,
   Button,
   Preview,
-  Heading,
   Hr,
+  Img,
 } from "@react-email/components";
 import { Header } from "./components/Header";
 import { EmailFooter } from "./components/Footer";
@@ -22,25 +22,12 @@ const PasswordResetEmail = () => {
       <Body>
         <Container style={container}>
           <Section>
-            <Section
-              style={{
-                color: 'white',
-                backgroundSize: 'fill',
-                backgroundRepeat: 'no-repeat',
-                backgroundImage: "url(https://storage.yandexcloud.net/animalmore/emails/banner_password_reset.png)",
-              }}
-            >
-              <Section style={{
-                position: 'relative',
-                borderRadius: '24px',
-                backgroundColor: '#CCD356',
-                zIndex: '-1'
-              }}>
-                <Heading as="h1" style={heading}>
-                  ВОССТАНОВЛЕНИЕ ПАРОЛЯ
-                </Heading>
-              </Section>
-            </Section>
+            <Img 
+              src="https://storage.yandexcloud.net/animalmore/emails/reset-password/v1/banner.png"
+              alt="Восстановление пароля"
+              width={'100%'}
+              height={'auto'}
+            />
 
             <Text style={text} >
               Чтобы установить новый пароль, нажмите на кнопку ниже
@@ -82,30 +69,20 @@ const container = {
   borderRadius: '6px',
 };
 
-const heading = {
-  maxWidth: '380px',
-  margin: "50px 30px",
-  fontWeight: "400",
-  fontSize: "28px",
-  lineHeight: "30px",
-  zIndex: '-1'
-};
-
 const text = {
   fontSize: "20px",
   lineHeight: "32px",
-  marginTop: "25px",
-  marginBottom: "20px"
+  margin: "20px 0",
 };
 
 const buttonStyle = {
-  display: "inline-block",
+  display: "inline",
   padding: "10px 32px",
   color: "white",
   borderRadius: "6px",
   backgroundColor: "#7DB21B",
-  lineHeight: '32px',
-  fontSize: "22px",
+  fontSize: "18px",
+  lineHeight: '20px',
   fontWeight: "400",
 };
 

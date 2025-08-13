@@ -15,7 +15,7 @@ export function EmailFooter() {
           <Link href="/">
             <Img
               style={{ display: "inline", marginLeft: "12px" }}
-              src="https://storage.yandexcloud.net/animalmore/emails/tg.webp"
+              src="https://storage.yandexcloud.net/animalmore/emails/social/v1/tg.webp"
               width="36"
               height="36"
               alt="Телеграм"
@@ -26,7 +26,7 @@ export function EmailFooter() {
           <Link href="/">
             <Img
               style={{ display: "inline", marginLeft: "12px" }}
-              src="https://storage.yandexcloud.net/animalmore/emails/vk.webp"
+              src="https://storage.yandexcloud.net/animalmore/emails/social/v1/vk.webp"
               width="36"
               height="36"
               alt="Вконтакте"
