@@ -11,24 +11,24 @@ export function EmailFooter() {
             © 2020 – 2025  ООО «Энималмор». Все права защищены.
           </Text>
         </Column>
-        <Column>
-          <Link href="/">
+        <Column style={{ paddingLeft: "12px"}}>
+          <Link href="https://t.me/animalmore">
             <Img
-              style={{ display: "inline", marginLeft: "12px" }}
-              src="https://storage.yandexcloud.net/animalmore/emails/social/v1/tg.webp"
-              width="36"
-              height="36"
+              style={{ display: "inline" }}
+              src="https://storage.yandexcloud.net/animalmore/emails/social/v1/tg.png"
+              width={36}
+              height={36}
               alt="Телеграм"
             />
           </Link>
         </Column>
-        <Column>
-          <Link href="/">
+        <Column style={{ paddingLeft: "12px"}}>
+          <Link href="https://vk.com/animalmore">
             <Img
-              style={{ display: "inline", marginLeft: "12px" }}
-              src="https://storage.yandexcloud.net/animalmore/emails/social/v1/vk.webp"
-              width="36"
-              height="36"
+              style={{ display: "inline" }}
+              src="https://storage.yandexcloud.net/animalmore/emails/social/v1/vk.png"
+              width={36}
+              height={36}
               alt="Вконтакте"
             />
           </Link>
